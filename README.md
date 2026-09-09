@@ -8,7 +8,7 @@ This is an old project originally written in 2023 being uploaded to GitHub now. 
 
 ## Goal
 
-The goal was to build a bot that could fully solve a Sudoku puzzle without any input other than pointing it at an open game window found [here](WEBSITE_URL_HERE), using a mix of:
+The goal was to build a bot that could fully solve a Sudoku puzzle without any input other than pointing it at an open game window found [here](https://sudoku.com/), using a mix of:
 
 - **Screen reading** — capturing a region of the screen and inspecting individual pixels to figure out which digit (if any) is in each of the 81 tiles.
 - **Solving logic** — a recursive backtracking algorithm that fills in the empty tiles while respecting standard Sudoku rules (no repeats in a row, column, or 3x3 box).
@@ -25,7 +25,7 @@ Most of the core goal was completed:
 
 Warnings:
 
-- The tile/line colors and pixel offsets are hardcoded to one specific Sudoku skin, so it only works with the [website](WEBSITE_URL_HERE) color scheme.
+- The tile/line colors and pixel offsets are hardcoded to one specific Sudoku skin, so it only works with the [website](https://sudoku.com/) color scheme.
 - There's no validation that the puzzle was read correctly — if a tile is misread, the solver will either fail to find a solution or enter an incorrect one.
 - It assumes a 9x9 classic Sudoku with no variant rules.
 
@@ -33,7 +33,7 @@ Warnings:
 
 This project targets Windows only, since it relies on `System.Windows.Forms` and `System.Drawing` for screen capture and simulated keyboard/mouse input.
 
-1. Navigate to [WEBSITE_NAME_HERE](WEBSITE_URL_HERE) and open a puzzle.
+1. Navigate to [https://sudoku.com/](https://sudoku.com/) and open a puzzle.
 2. Build and run the project.
 3. When prompted in the console, hover your cursor over the board and press Enter, then press Enter again to let it search for and lock onto the board's grid lines.
 4. Press any key to start. The bot will read the board, solve it, and type the solution in automatically.
